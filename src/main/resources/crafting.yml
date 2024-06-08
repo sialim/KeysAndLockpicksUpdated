@@ -1,0 +1,89 @@
+#Locks and Lockpicking by Mathias0903(minecraft: DragonsIce)
+#Recipes as you can see we have 3 line 1, 2, 3.
+#these correspond to a line in the crafting table
+#so 1 is top row of crafting table, 3 is bottom
+#then we have letters each letter corresponds to a material list in its materials
+#just below, if there letter is not there it corresponds to notthing
+#i however recommend to use * for empty slot makes it more readable.
+#as seen below. all possiable materials are list here 
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# you also have a sharpless recipe for lockpick this is just a list of Materials. MAX 9
+# if youre server is 1.10 and below you will have to change iron_nugget 
+# to a material that acuttly exists in that version.
+lockpick:
+  - IRON_INGOT
+  - IRON_NUGGET
+  - IRON_NUGGET
+key:
+  1: 'AAA'
+  2: '*BB'
+  3: '***'
+  materials:
+    A: IRON_INGOT
+    B: IRON_NUGGET
+weak:
+  1: '*B*'
+  2: 'BAB'
+  3: '*B*'
+  materials:
+    A: FLINT
+    B: COBBLESTONE
+normal:
+  1: 'CBC'
+  2: 'BAB'
+  3: 'CBC'
+  materials:
+    A: FLINT
+    B: IRON_INGOT
+    C: COBBLESTONE
+tough:
+  1: 'CBC'
+  2: 'BAB'
+  3: 'CBC'
+  materials:
+    A: FLINT
+    B: GOLD_INGOT
+    C: IRON_INGOT
+strong:
+  1: 'CBC'
+  2: 'BAB'
+  3: 'CBC'
+  materials:
+    A: FLINT
+    B: DIAMOND
+    C: GOLD_INGOT
+fine:
+  1: 'CBC'
+  2: 'BAB'
+  3: 'CBC'
+  materials:
+    A: FLINT
+    B: EMERALD
+    C: DIAMOND
+# the default recipe for master(the unpickable lock) is made to be impossible
+# for Normal Players. requreing both Command blocks and Bedrock.
+master:
+  1: 'CBC'
+  2: 'BAB'
+  3: 'CBC'
+  materials:
+    A: FLINT
+    B: COMMAND_BLOCK
+    C: BEDROCK
+potiontrap:
+  1: 'BCB'
+  2: 'BAB'
+  3: 'BDB'
+  materials:
+    A: FLINT_AND_STEEL
+    B: GLASS_BOTTLE
+    C: DISPENSER
+    D: TRIPWIRE_HOOK
+redstonetrap:
+  1: '*B*'
+  2: '*A*'
+  3: '*C*'
+  materials:
+    A: FLINT_AND_STEEL
+    B: REDSTONE_TORCH
+    C: TRIPWIRE_HOOK

@@ -1,0 +1,27 @@
+name: LocksAndLockpicking
+version: 1.9.3
+main: me.sialim.keysandlockpicks.KeysAndLockpicks
+authors: [Mathias0903]
+softdepend: [Multiverse-Core]
+api-version: '1.20'
+commands:
+  lockpick:
+    description: Main command for LocksAndLockpicking
+    usage: /lockpick (arg1) (arg2)
+    aliases: [lp, lock]
+permissions:
+  lockpick.override:
+    description: let you open and break locked chest,shulker boxes and doors without the key
+    default: op
+  lockpick.admin:
+    description: admin commands
+    default: op
+  lockpick.pick:
+    description: allows players to lockpick chests/doors/shulker boxes
+    default: true
+  lockpick.move:
+    description: allows players to move unstealable items
+    default: op
+  lockpick.recipe.view:
+    description: allows players to see recipes
+    default: true

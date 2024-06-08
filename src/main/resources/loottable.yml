@@ -1,0 +1,30 @@
+#Locks and Lockpicking by Mathias0903(minecraft: DragonsIce)
+#this is the file where the loot tables for all youre loot boxes gets saved
+#i advice that you don´t change anything by hand and insted do it ingame
+#with the command "/lockpick lootbox".
+loot:
+  '1':
+    items:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_INGOT
+  '2':
+    items:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_INGOT
+  '3':
+    items:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_INGOT
+  '4':
+    items:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_INGOT
+  '5':
+    items:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_INGOT

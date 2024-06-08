@@ -1,0 +1,141 @@
+# Locks and Lockpicking by Mathias0903(minecraft: DragonsIce)
+  # the language yml to use locate in LocksAndLocpicking/language
+  language: en
+  # chance of getting kicked out of the lockpicking gui and the sequnze reseting start/minimum. without %
+  tierkickstart: 10
+  # chance of getting kicked out of the lockpicking gui and the sequnze reseting per tier above 1. without %
+  tierkicklevel: 5
+  # chance of a lockpick breaking start/minimum. without %
+  tierbreakstart: 30
+  # chance of a lockpick breaking per tier above 1. without %
+  tierbreaklevel: 8
+  # setting this to true will make it so ids are given to locks instead of keys and
+  # when you click a lock with a key, the key gets the id of lock instead of the other way around
+  # this makes it less atractive to steal locks
+  invertid: false
+  # Changing this to false will make locked chests/shulker boxes/doors unexplodable
+  # in other words they dosen´t get destoryed by explosions
+  explodable: true
+  # what Material/item the lock/key/lockpick is. all possiable materials are list here 
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  # something to note is that already crafted locks/keys/lockpick aren´t gona update(might add this later)
+  # and they will stile work. if you want to edit the the recipe check crafting.yml
+  # you can set the durrabilty of items with durrabilty, the item will be unbreakable
+  # and stille useable for its purpose, in other words if you set the lockMaterial
+  # to DIAMOND_SWORD:5 the lock will be a unbreakable diamond sword and do as much damage as a diamond sword and be enchantable
+  # the way to set it is: MATERIAL:(amount of durrabilty missing)
+  LockMaterial: FLINT
+  TrapMaterial: IRON_BARS
+  KeyMaterial: NAME_TAG
+  LockpickMaterial: STICK
+  CylinderMaterial: IRON_INGOT
+  GuideMaterial: STICK
+  BarMaterial: IRON_BARS
+  door:
+  # how long there goes before a lockpicked door autocloses in seconds
+  # setting this to 0, disables autoclose 
+    autoclose: 10
+  #weather people can steal locks when they have lockpicked a door
+    steal: true
+  # before you use sounds be sure to check the sound enums of youre version
+  # genrally its https://jd.bukkit.org/org/bukkit/Sound.html befor 1.9
+  # and https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html after 1.9
+  # if you don´t want to use sounds simply set to nothing like this
+  # denybreak:
+  sound:
+    # played when player tries to break a locked chest/shulker box/door
+    denybreak: 
+      sound: BLOCK_ANVIL_BREAK
+      volume: 1
+      pitch: 1
+    # played when player opens a lootbox lockpick minigame.
+    openlootbox: 
+      sound: BLOCK_ANVIL_LAND
+      volume: 1
+      pitch: 1
+    # played when player opens a lock with a key
+    openlockkey: 
+      sound: 
+      volume: 1
+      pitch: 1
+    # played when player tries to lockpick a chest without lockpicks
+    nolockpick: 
+      sound: BLOCK_DISPENSER_FAIL
+      volume: 1
+      pitch: 1
+    # played when player tries to lockpick a chest and the a lockpick breaks
+    lockpickbreak: 
+      sound: BLOCK_DISPENSER_FAIL
+      volume: 1
+      pitch: 1
+    # played when a player links a lock to a key
+    linklock: 
+      sound: BLOCK_ANVIL_USE
+      volume: 1
+      pitch: 1
+    # played when a player click the right cylinder
+    correctcylinder: 
+      sound: ENTITY_ITEM_PICKUP
+      volume: 1
+      pitch: 1
+    # played when a player successfully lockpicks a lock
+    successe: 
+      sound: ENTITY_PLAYER_LEVELUP
+      volume: 1
+      pitch: 1
+    # played when a player fails to lockpicks a lock
+    fail: 
+      sound: ENTITY_PLAYER_DEATH
+      volume: 1
+      pitch: 1
+    # played when a player fill a potion trap with a potion
+    potiontrapfill: 
+      sound: ENTITY_SPLASH_POTION_BREAK
+      volume: 1
+      pitch: 1
+    # played when a player emptys a potion trap
+    potiontrapempty: 
+      sound: ENTITY_SPLASH_POTION_THROW
+      volume: 1
+      pitch: 1
+  # here you can change diffrent things abort the lootboxes
+  lootbox:
+   # how long there must go between trying to open a permanent lootbox(one set by command)
+    # setting this to -1 means they can only open it once. in seconds
+    delay: -1
+    # minimum and maximum amount of items in a lootbox
+    min: 1
+    max: 10
+    # the chance in % for it to stop adding items to inventory after min is reached.
+    # meaning after it add min items to the inventory(this happens before its showen to player) 
+    # it will have a 10%(default) chance to stop adding items
+    chance: 10
+    world:
+      # if it should randomly spawn lootboxes in the world
+      enabled: false
+      # if naturally generated chests should be locked
+      # they will stile contain all the same loot
+      natural: false
+      # list of worlds it should be enabled in
+      # it also takes 2 or 3 values, the 2 first is required
+      # and the last is optional. look below for what the 2 first are
+      # the optional one is the max amount of loot chests in a world at any given time
+      # if its not set its or set to 0 and below its unlimted
+      # so in the end the format is: (world name):(x):(z):[max amount]
+      worlds:
+        - world:0:0
+      # the radius from the coordinates specifid after the world in this case 0:0 is x: 0 z:0 in a cuboid form
+      # in whice it will spawn lootboxes,
+      radius: 1000
+      # the delay between it spawing a lootbox, in minnuets
+      time: 10
+      # the chances of the loot box being tier x,
+      # the total should be 100
+      weak: 35
+      normal: 25
+      tough: 20
+      strong: 15
+      fine: 5
+  potiontrap:
+    maxcharges: 1000
+    time: 3
