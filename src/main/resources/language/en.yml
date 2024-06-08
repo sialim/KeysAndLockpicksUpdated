@@ -1,0 +1,69 @@
+#Locks and Lockpicking by Mathias0903(minecraft: DragonsIce)
+#Credits for this translation: ?????
+#Change text displayed to the player
+minigame:
+  name: '&7Lockpicking Difficulty: '
+  ironcylind: 'iron cylind'
+#the guide item in the minigame gui.
+  guide:
+    name: 'Guide'
+    line1: '&fClick the iron cylinders in'
+    line2: '&fthe right order to unlock the chest'
+gui:
+  doormenu: '&cDoor'
+  recipe: 
+    main: '§6LocksAndLockpicking Recipes'
+    recipe: '§6LocksAndLockpicking Recipe'
+    workbench: '§6Made in a Crafting table'
+    back: '§6<-- back'
+    shapeless: '§6This is a shapeless recipe'
+#messages that gets sent when player tries to do somthing.
+message:
+  nolockpick: 'You dont have any lockpicks. craft some!'
+  unpickable: 'Lock is unpickable!'
+  locked: 'you have locked the door'
+  unlocked: 'you have unlocked the door'
+#messages that gets sent by the command.
+command:
+  mustnumber: 'arg-2 must be a number between 1 and 6'
+  noperm: 'You do not have permission!'
+  help:
+    lock: '&6/lockpick lock 1-6 : gives you a lock of tier 1 to 6.'
+    lootbox: '&6/lockpick lootbox : will open a menu where you can change loot tables'
+    lootbox2: '&6/lockpick lootbox 1-5 true/false : will make a loot box where you stand of tier 1-5, if set to true the lootbox will be permanent '
+    help: '&6/lockpick : shows this'
+lootbox:
+# name of the lootboxes if its a permennent one and if its not one.
+# MUST BE DIFFRENT!
+  permlootbox: '&4Loot Box: '
+  lootbox: '&2Loot Box: '
+#message that gets send when a player tries to fill a trap with a potion that dosen´t match whats already in it
+potion:
+  dontmatch: 'Potion must match the type and strentgh of the one already in the trap, you can empty the trap by right clicking with it.'
+tags:
+  # whats added to the lore to mark it as unstealable if you change this 
+  # all items marked with it will become stealable
+  unstealable: 'unstealable'
+#name of locks, lockpick and key will only Change name of locks crafted after the change!
+#meaing any lock that was crafted before the change keeps it name, and stille works.
+#loreid means that this is what the plugin checks for in the lore to determine, 
+#what said item is, changing this will make all already crafted item(from this plugin) useless.
+crafting:
+  lockpick: 'Lockpick'
+  lockpickloreid: 'Lockpick'
+  key: 'Key'
+  keyloreid: 'Key'
+  difficultyloreid: '&7Difficulty: '
+  weak: 'Weak Lock'
+  normal: '&aNormal Lock'
+  tough: '&6Tough Lock'
+  strong: '&4Strong Lock'
+  fine: '&bFine Lock'
+  master: '&dMaster Lock'
+  redstonetrap: '&cRedstone Trap'
+  redstonetraploreid: 'Redstone Trap'
+  potiontrap: '&cPotion Trap'
+  potiontraploreid: 'Potion Trap'
+  potiontraptype: 'Type: '
+  potiontrapsplash: 'Splash: '
+  potiontrapcharges: 'Charges: '

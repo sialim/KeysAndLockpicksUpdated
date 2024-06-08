@@ -1,6 +1,6 @@
 name: LocksAndLockpicking
 version: 1.9.3
-main: me.sialim.keysandlockpicks.KeysAndLockpicks
+main: me.sialim.keysandlockpicks.main.Main
 authors: [Mathias0903]
 softdepend: [Multiverse-Core]
 api-version: '1.20'

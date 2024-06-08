@@ -1,0 +1,69 @@
+#Locks and Lockpicking by Mathias0903(minecraft: DragonsIce)
+#Credits for this translation: Iluster - www.netmul.de
+#Change text displayed to the player
+minigame:
+  name: '&7Schwierigkeit beim Schloss öffnen: '
+  ironcylind: 'Eisen Zylinder'
+#the guide item in the minigame gui.
+  guide:
+    name: 'Hilfe'
+    line1: '&fKlicke in der richtigen Reihenfolge auf'
+    line2: '&fdie Eisenzylinder, um die Truhe zu öffnen.'
+gui:
+  doormenu: '&cTür'
+  recipe: 
+    main: '§6LocksAndLockpicking Rezepte'
+    recipe: '§6LocksAndLockpicking Rezept'
+    workbench: '§6Wird in einer Werkbank hergestellt.'
+    back: '§6<-- Zurück'
+    shapeless: '§6Dies ist ein formloses Rezept.'
+#messages that gets sent when player tries to lockpick somthing.
+message:
+  nolockpick: 'Kein Dietrich!'
+  unpickable: 'Dieses Schloss geht nur mit dem richtigen Schlüssel auf!'
+  locked: 'Die Tür ist jetzt verschlossen.'
+  unlocked: 'Die Tür ist jetzt nicht verschlossen.'
+#messages that gets sent by the command.
+command:
+  mustnumber: 'arg-2 muss eine Zahl zwischen 1 und 6 sein.'
+  noperm: 'Keine Berechtigung!'
+  help:
+    lock: '&c/lockpick lock 1-6 &8- &7erzeugt ein Schloss von Stufe 1 bis 6.'
+    lootbox: '&c/lockpick lootbox &8- &7öffnet ein Menü, in dem die Beute-Tabellen geändert werden können.'
+    lootbox2: '&c/lockpick lootbox 1-5 true/false &8- &7erstellt eine Beute-Truhe mit der Stufe 1-5, wird der Befehl mit &ctrue &7am Ende benutzt, bleibt die Beute-Truhe dauerhaft.'
+    help: '&c/lockpick help &8- &7zeigt alle Befehle.'
+lootbox:
+# name of the lootboxes if its a permennent one and if its not one.
+# MUST BE DIFFRENT!
+  permlootbox: '&4Beute-Truhe: '
+  lootbox: '&2Beute-Truhe: '
+#message that gets send when a player tries to fill a trap with a potion that dosen´t match whats already in it
+potion:
+  dontmatch: 'Der Trank muss dem Typ und der Stärke des bereits in der Falle befindlichen Tranks entsprechen. Die Falle kann entleert werden, indem mit der rechten Maustaste darauf geklickt wird.'
+tags:
+  # whats added to the lore to mark it as unstealable if you change this 
+  # all items marked with it will become stealable
+  unstealable: 'Gebunden' 
+#name of locks, lockpick and key will only Change name of locks crafted after the change!
+#meaing any lock that was crafted before the change keeps it name, and stille works.
+#loreid means that this is what the plugin checks for in the lore to determine, 
+#what said item is, changing this will make all already crafted item(from this plugin) useless.
+crafting:
+  lockpick: 'Dietrich'
+  lockpickloreid: 'Dietrich'
+  key: 'Schlüssel'
+  keyloreid: 'Schlüssel'
+  difficultyloreid: '&7Schwierigkeit: '
+  weak: 'Einfaches Schloss'
+  normal: '&aNormales Schloss'
+  tough: '&6Gutes Schloss'
+  strong: '&4Sehr gutes Schloss'
+  fine: '&bSicheres Schloss'
+  master: '&dMeisterliches Schloss'
+  redstonetrap: '&cRedstone-Falle'
+  redstonetraploreid: 'Redstone-Falle'
+  potiontrap: '&cTrank-Falle'
+  potiontraploreid: 'Trank-Falle'
+  potiontraptype: 'Typ: '
+  potiontrapsplash: 'Reichweite: '
+  potiontrapcharges: 'Ladungen: '
